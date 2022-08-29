@@ -53,16 +53,6 @@ def validate_data(values):
     
     return True
 
-def update_sales_worksheet(data):
-    """
-    Update sales worksheet, add new row with the list data provided.
-    """
-
-    print("Updating sales worksheet... \n")
-    sales_worksheet = SHEET.worksheet("sales")
-    sales_worksheet.append_row(data)
-    print("Sales worksheet updated successfully. \n")
-
 def calculate_surplus_data(sales_row):
     """
     Compare sales with stock and calculate surplus for each type.
@@ -76,17 +66,6 @@ def calculate_surplus_data(sales_row):
         surplus_data.append(surplus)
     
     return surplus_data
-
-def update_surplus_worksheet(data):
-
-    """
-    Updates surplus worksheet, add new row with the list of data provided.
-    """
-
-    print("Updating surplus worksheet...\n")
-    surplus_worksheet = SHEET.worksheet("surplus")
-    surplus_worksheet.append_row(data)
-    print("Surplus worksheet updated successfully. \n")
 
 def update_worksheet(data, worksheet):
     """
